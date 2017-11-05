@@ -9,8 +9,9 @@ print "Categorias"
 print "=" * 9
 print "\n"
 
-for i in categorias:
-	print i 
+
+for categoria in categorias:
+		print categoria 
 
 print "\n"
 
@@ -21,6 +22,6 @@ categoria = raw_input('Escribe la categoria de la imagen que buscas:' )
 url_req = "%s/%s/%s/%s" % (url,ancho,alto,categorias[int(categoria)])
 resultado = urlopen(url_req)
 lectura = resultado.read()
-f = open("holder_%d.jpg" % img, "wb")#foto
+f = open("holder.jpg", "wb")#foto
 f.write(lectura)
 f.close()
